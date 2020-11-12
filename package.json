@@ -1,0 +1,53 @@
+{
+  "name": "yandex-diploma-front",
+  "version": "1.0.0",
+  "description": "Дипломный проект в рамках курса Frontend-разработчик от Яндекс.Практикум",
+  "main": "index.js",
+  "scripts": {
+    "build": "rimraf dist && cross-env NODE_ENV=production webpack --mode production",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --mode development --open --watch",
+    "deploy": "cross-env NODE_ENV=production gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fedor531/Yandex-diploma-front.git"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "js",
+    "webpack"
+  ],
+  "author": "Fedor <fedor531@yandex.ru>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fedor531/Yandex-diploma-front/issues"
+  },
+  "homepage": "https://github.com/Fedor531/Yandex-diploma-front#readme",
+  "devDependencies": {
+    "cross-env": "^7.0.2",
+    "babel-loader": "^8.1.0",
+    "@babel/cli": "^7.12.1",
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "mini-css-extract-plugin": "^1.2.1",
+    "optimize-css-assets-webpack-plugin": "^5.0.4",
+    "css-loader": "^5.0.0",
+    "html-webpack-plugin": "^4.5.0",
+    "postcss-loader": "^4.0.4",
+    "autoprefixer": "^10.0.1",
+    "cssnano": "^4.1.10",
+    "file-loader": "^6.2.0",
+    "image-webpack-loader": "^7.0.1",
+    "style-loader": "^2.0.0",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12",
+    "webpack-md5-hash": "0.0.6",
+    "webpack-dev-server": "^3.11.0",
+    "gh-pages": "^2.2.0"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "core-js": "^3.4.1"
+  }
+}
