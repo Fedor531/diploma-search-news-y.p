@@ -1,6 +1,8 @@
 @import url(../vendor/normalize.css);
 @import url(../vendor/fonts.css);
+@import url(../blocks/header/header.css);
 
-body {
-  background-color: #000;
+*, *::before, *::after {
+  box-sizing: border-box;
 }
+

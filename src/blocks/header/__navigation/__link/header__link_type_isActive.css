@@ -1,0 +1,26 @@
+.header__link_isActive {
+  padding-bottom: 15px;
+}
+
+.header_theme_black .header__link_isActive {
+  color: #000;
+  border-bottom: 3px solid #1A1B22;
+}
+
+.header_theme_white .header__link_isActive {
+  color: #fff;
+  border-bottom: 3px solid #fff;
+}
+
+@media all and (min-width: 768px) {
+  .header__link_isActive {
+    padding-bottom: 18px;
+  }
+}
+
+@media all and (min-width: 1439px) {
+  .header__link_isActive {
+    padding-bottom: 24px;
+  }
+}
+
