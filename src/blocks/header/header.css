@@ -8,9 +8,11 @@
 @import url(./__menu-item/header__menu-item.css);
 
 .header {
+  position: relative;
   display: flex;
   justify-content: space-between;
   padding: 15px 16px;
+  z-index: 10;
 }
 
 @media all and (min-width: 768px) {
@@ -19,9 +21,9 @@
   }
 }
 
-@media all and (min-width: 1439px) {
+@media all and (min-width: 1440px) {
   .header {
-    padding: 26px 105px;
+    padding: 28px 105px;
   }
 }
 

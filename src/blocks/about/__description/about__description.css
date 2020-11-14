@@ -10,3 +10,9 @@
   }
 }
 
+@media all and (min-width: 1440px) {
+  .about__description {
+    margin-top: 50px;
+  }
+}
+

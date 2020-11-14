@@ -18,9 +18,9 @@
   }
 }
 
-@media all and (min-width: 1439px) {
+@media all and (min-width: 1440px) {
   .header__menu-link_isActive {
-    padding-bottom: 24px;
+    padding-bottom: 26px;
   }
 }
 

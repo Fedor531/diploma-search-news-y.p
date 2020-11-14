@@ -17,11 +17,12 @@
 
 @media all and (min-width: 768px) {
   .search-news__input {
+    margin-bottom: 0;
     width: 488px;
   }
 }
 
-@media all and (min-width: 1439px) {
+@media all and (min-width: 1440px) {
   .search-news__input {
     width: 608px;
   }
