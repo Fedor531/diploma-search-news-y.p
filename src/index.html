@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="/src/images/favicon.png" />
+  <link rel="icon" href="<%=require('./images/favicon.png').default%>" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
   <title>Дипломная работа</title>
@@ -39,8 +39,13 @@
 
   </section>
 
+  <section class="preloader">
+    <i class="preloader__circle"></i>
+    <p class="preloader__text">Идет поиск новостей...</p>
+  </section>
+
   <section class="about">
-    <img class="about__image" src="/src/images/student.png" alt="Фото студента">
+    <img class="about__image" src="<%=require('./images/student.png').default%>" alt="Фото студента">
     <div class="about__description">
       <h3 class="content-title">
         Об авторе
@@ -68,8 +73,10 @@
       </ul>
     </nav>
     <div class="footer__socials-container">
-      <a class="footer__social-link" href="#"><img src="/src/images/gihub-logo.svg" alt="Логотип Github"></a>
-      <a class="footer__social-link" href="#"><img src="/src/images/facebook-logo.svg" alt="Логотип Facebook"></a>
+      <a class="footer__social-link" href="#"><img src="<%=require('./images/gihub-logo.svg').default%>"
+          alt="Логотип Github"></a>
+      <a class="footer__social-link" href="#"><img src="<%=require('./images/facebook-logo.svg').default%>"
+          alt="Логотип Facebook"></a>
     </div>
   </footer>
 
