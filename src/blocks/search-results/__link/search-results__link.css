@@ -1,0 +1,18 @@
+.search-results__link {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #1A1B22;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+}
+
+@media all and (min-width: 768px) {
+  .search-results__link {
+    margin: 0;
+  }
+}

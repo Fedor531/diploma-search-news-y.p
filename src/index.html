@@ -22,45 +22,94 @@
     </nav>
   </header>
 
-  <section class="search-news">
-    <div class="search-news__container">
-      <h2 class="search-news__title">
-        Что в мире творится?
-      </h2>
-      <p class="search-news__subtitle">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях
-        за прошедшую неделю.</p>
-      <form class="search-news__form">
-        <input class="search-news__input" type="text" placeholder="Политика">
-        <button class="search-news__button">Искать</button>
-      </form>
+  <main>
+
+    <section class="search-news">
+      <div class="search-news__container">
+        <h2 class="search-news__title">
+          Что в мире творится?
+        </h2>
+        <p class="search-news__subtitle">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях
+          за прошедшую неделю.</p>
+        <form class="search-news__form">
+          <input class="search-news__input" type="text" placeholder="Политика">
+          <button class="search-news__button">Искать</button>
+        </form>
+      </div>
+    </section>
+
+    <div class="nothing-found container">
+      <img class="nothing-found__image" src="<%=require('./images/not-found.svg').default%>" alt="Грустная картинка">
+      <p class="nothing-found__title">Ничего не найдено</p>
+      <p class="nothing-found__subtitle">К сожалению по вашему запросу ничего не найдено.</p>
     </div>
-  </section>
 
-  <div class="nothing-found container">
-    <img class="nothing-found__image" src="<%=require('./images/not-found.svg').default%>" alt="Грустная картинка">
-    <p class="nothing-found__title">Ничего не найдено</p>
-    <p class="nothing-found__subtitle">К сожалению по вашему запросу ничего не найдено.</p>
-  </div>
-
-  <div class="preloader container">
-    <i class="preloader__circle"></i>
-    <p class="preloader__text">Идет поиск новостей...</p>
-  </div>
-
-  <section class="about container">
-    <img class="about__image" src="<%=require('./images/student.png').default%>" alt="Фото студента">
-    <div class="about__description">
-      <h3 class="content-title">
-        Об авторе
-      </h3>
-      <p class="content-subtitle">
-        Это блок с описанием автора проекта.
-        Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владеете.
-        Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь
-        потенциальным заказчикам.
-      </p>
+    <div class="preloader container">
+      <i class="preloader__circle"></i>
+      <p class="preloader__text">Идет поиск новостей...</p>
     </div>
-  </section>
+
+    <section class="search-results container">
+      <div class="search-results__title-container">
+        <h3 class="content-title">
+          Результаты поиска
+        </h3>
+        <a class="search-results__link" href="#">
+          <p class="search-results__link-text">Посмотреть аналитику</p>
+          <img src="<%=require('./images/arrow.svg').default%>" alt=">">
+        </a>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <img class="card__image" src="<%=require('./images/card-image1.png').default%>" alt="">
+          <div class="card__content">
+            <p class="card__date">2 августа, 2019</p>
+            <p class="card__title">Национальное достояние – парки</p>
+            <p class="card__subtitle">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складыв...
+            </p>
+            <p class="card__source">Лента.ру</p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card__image" src="<%=require('./images/card-image2.png').default%>" alt="">
+          <div class="card__content">
+            <p class="card__date">2 августа, 2019</p>
+            <p class="card__title">Лесные огоньки: история одной фотографии</p>
+            <p class="card__subtitle">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складыв...
+            </p>
+            <p class="card__source">Лента.ру</p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card__image" src="<%=require('./images/card-image3.png').default%>" alt="">
+          <div class="card__content">
+            <p class="card__date">2 августа, 2019</p>
+            <p class="card__title">Национальное достояние – парки</p>
+            <p class="card__subtitle">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складыв...
+            </p>
+            <p class="card__source">Лента.ру</p>
+          </div>
+        </div>
+      </div>
+      <button class="search-results__show-more-button">Показать еще</button>
+    </section>
+
+    <section class="about container">
+      <img class="about__image" src="<%=require('./images/student.png').default%>" alt="Фото студента">
+      <div class="about__description">
+        <h3 class="content-title">
+          Об авторе
+        </h3>
+        <p class="content-subtitle">
+          Это блок с описанием автора проекта.
+          Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владеете.
+          Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь
+          потенциальным заказчикам.
+        </p>
+      </div>
+    </section>
+
+  </main>
 
   <footer class="footer">
     <p class="footer__copyright">&copy; 2020. Федор Переверзев</p>

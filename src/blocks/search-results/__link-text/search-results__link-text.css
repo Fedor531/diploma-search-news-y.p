@@ -1,0 +1,10 @@
+.search-results__link-text {
+  margin: 0 7px 0 0;
+}
+
+
+@media all and (min-width: 768px) {
+  .search-results__link-text {
+    margin: 0 10px 0 0;
+  }
+}
