@@ -1,0 +1,12 @@
+.about__description {
+  margin-top: 24px;
+  max-width: 288px;
+}
+
+@media all and (min-width: 768px) {
+  .about__description {
+    max-width: none;
+    margin-top: 0;
+  }
+}
+
