@@ -1,0 +1,13 @@
+.footer__nav {
+  order: 1;
+  margin-top: 18px;
+}
+
+@media all and (min-width: 768px) {
+  .footer__nav {
+    display: flex;
+    align-items: center;
+    order: 2;
+    margin-top: 0;
+  }
+}

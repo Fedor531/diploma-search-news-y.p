@@ -5,6 +5,7 @@
 @import url(../blocks/about/about.css);
 @import url(../blocks/content-title/content-title.css);
 @import url(../blocks/content-subtitle/content-subtitle.css);
+@import url(../blocks/footer/footer.css);
 
 *, *::before, *::after {
   box-sizing: border-box;

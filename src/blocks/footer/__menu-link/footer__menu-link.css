@@ -1,0 +1,21 @@
+.footer__menu-link {
+  font-family: 'Source San Pro';
+  font-style: normal;
+  font-weight: 400;
+  line-height: 48px;
+  font-size: 18px;
+  color: #1A1B22;
+  text-decoration: none;
+  cursor: pointer;
+  transition: .2s ease-in-out;
+}
+.footer__menu-link:hover {
+  color: rgb(0, 0, 0, .7);
+}
+
+@media all and (min-width: 768px) {
+  .footer__menu-link {
+    line-height: 0;
+  }
+}
+
