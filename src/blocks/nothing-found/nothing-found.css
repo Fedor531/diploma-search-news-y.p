@@ -1,0 +1,9 @@
+@import url(./__subtitle/nothing-found__subtitle.css);
+@import url(./__title/nothing-found__title.css);
+@import url(./__image/nothing-found__image.css);
+
+.nothing-found {
+  text-align: center;
+  padding: 80px 0;
+  background: #F5F6F7;
+}
