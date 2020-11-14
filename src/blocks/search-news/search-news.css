@@ -1,0 +1,11 @@
+@import url(./__title/search-news__title.css);
+@import url(./__container/search-news__container.css);
+@import url(./__subtitle/search-news__subtitle.css);
+@import url(./__form/search-news__form.css);
+
+.search-news {
+  background: url(../../images/main-back.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}

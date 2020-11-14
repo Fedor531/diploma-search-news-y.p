@@ -1,0 +1,24 @@
+.search-news__subtitle {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  color: #fff;
+  margin: 16px 0 0 0;
+}
+
+@media all and (min-width: 768px) {
+  .search-news__subtitle {
+    font-size: 18px;
+    line-height: 24px;
+    max-width: 480px;
+  }
+}
+
+@media all and (min-width: 1439px) {
+  .search-news__subtitle {
+    max-width: none;
+  }
+}
+

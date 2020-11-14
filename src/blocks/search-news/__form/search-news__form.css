@@ -1,0 +1,23 @@
+@import url(./__button/search-news__button.css);
+@import url(./__input/search-news__input.css);
+
+.search-news__form {
+  margin: 64px 0 0 0;
+  padding-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+@media all and (min-width: 768px) {
+  .search-news__form {
+    flex-direction: row;
+    padding-bottom: 48px;
+  }
+}
+
+@media all and (min-width: 1439px) {
+  .search-news__form {
+    padding-bottom: 80px;
+  }
+}
+

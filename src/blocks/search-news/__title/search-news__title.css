@@ -1,0 +1,23 @@
+.search-news__title {
+  color: #fff;
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 40px;
+  margin: 0;
+}
+
+@media all and (min-width: 768px) {
+  .search-news__title {
+    max-width: 300px;
+  }
+}
+
+@media all and (min-width: 1439px) {
+  .search-news__title {
+    font-size: 60px;
+    line-height: 64px;
+    max-width: none;
+  }
+}

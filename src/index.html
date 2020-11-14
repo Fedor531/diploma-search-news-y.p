@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- <link rel="icon" href="https://image.flaticon.com/icons/png/512/3/3901.png" /> -->
+  <link rel="icon" href="/src/images/favicon.png" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
   <title>Дипломная работа</title>
@@ -12,13 +12,40 @@
 
 <body>
 
-  <header class="header header_theme_black">
-    <h1 class="header__logo">NewsAnalyzer</h1>
-    <nav class="header__navigation">
-      <a href="#" class="header__link">Главная</a>
-      <a href="#" class="header__link header__link_isActive">О проекте</a>
-    </nav>
-  </header>
+  <section class="search-news">
+
+    <header class="header header_theme_white">
+      <h1 class="header__logo">NewsAnalyzer</h1>
+      <nav class="header__navigation">
+        <a href="#" class="header__link">Главная</a>
+        <a href="#" class="header__link header__link_isActive">О проекте</a>
+      </nav>
+    </header>
+
+    <div class="search-news__container">
+      <h2 class="search-news__title">
+        Что в мире творится?
+      </h2>
+      <p class="search-news__subtitle">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.</p>
+      <form class="search-news__form">
+        <input class="search-news__input" type="text" placeholder="Политика">
+        <button class="search-news__button">Искать</button>
+      </form>
+    </div>
+
+  </section>
+
+  <section class="about">
+    <img  class="about__image" src="/src/images/student.png" alt="Фото студента">
+    <div class="about__description">
+      <h3>
+        Об авторе
+      </h3>
+      <p>
+
+      </p>
+    </div>
+  </section>
 
   <script src="<%= htmlWebpackPlugin.files.js %>"></script>
 </body>

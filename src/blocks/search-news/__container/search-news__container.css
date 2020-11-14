@@ -1,0 +1,18 @@
+.search-news__container {
+  max-width: 288px;
+  margin:  30px auto 0 auto;
+}
+
+@media all and (min-width: 768px) {
+  .search-news__container {
+    margin:  40px auto 0 auto;
+    max-width: 488px;
+  }
+}
+
+@media all and (min-width: 1439px) {
+  .search-news__container {
+    max-width: 608px;
+    margin:  80px auto 0 auto;
+  }
+}

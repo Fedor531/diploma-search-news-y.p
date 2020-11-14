@@ -1,7 +1,8 @@
 .header__logo {
-  font-family: Roboto Slab;
+  font-family: 'Roboto Slab';
   font-style: normal;
   font-weight: bold;
+  letter-spacing: 1px;
   font-size: 16px;
   line-height: 24px;
   margin: 0;
