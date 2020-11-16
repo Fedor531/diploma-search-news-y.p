@@ -6,14 +6,15 @@
   line-height: 24px;
   text-decoration: none;
   color: #B6BCBF;
-  transition: .2s ease-in-out;
 }
 
 .header_theme_black .header__menu-link:hover {
+  transition: .2s ease-in-out;
   color: #000;
 }
 
 .header_theme_white .header__menu-link:hover {
+  transition: .2s ease-in-out;
   color: #fff;
 }
 

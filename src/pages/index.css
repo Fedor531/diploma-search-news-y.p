@@ -13,6 +13,7 @@
 @import url(../blocks/cards/cards.css);
 @import url(../blocks/card/card.css);
 @import url(../blocks/clients/clients.css);
+@import url(../blocks/technology/technology.css);
 
 
 *, *::before, *::after {

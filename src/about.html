@@ -8,7 +8,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
   <meta name="description" content="Страница с описанием проекта">
-  <meta name="author" content="Федор Переверзев"/>
+  <meta name="author" content="Федор Переверзев" />
   <title>Дипломная работа</title>
 </head>
 
@@ -56,6 +56,32 @@
             сайт, мы рекомендуем
             обратиться к этому студенту.
           </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="technology">
+      <div class="technology__container">
+        <h3 class="technology__title content-title">
+          Используемые технологии
+        </h3>
+        <div class="technology__items">
+          <div class="technology__item">
+            <p class="technology__item-name">HTML</p>
+            <img class="technology__item-image" src="<%=require('./images/html-logo.png').default%>" alt="HTML">
+          </div>
+          <div class="technology__item">
+            <p class="technology__item-name">CSS</p>
+            <img class="technology__item-image" src="<%=require('./images/css-logo.png').default%>" alt="CSS">
+          </div>
+          <div class="technology__item">
+            <p class="technology__item-name">Java Script</p>
+            <img class="technology__item-image" src="<%=require('./images/js-logo.png').default%>" alt="Java Script">
+          </div>
+          <div class="technology__item">
+            <p class="technology__item-name">Webpack</p>
+            <img class="technology__item-image" src="<%=require('./images/webpack-logo.png').default%>" alt="Webpack">
+          </div>
         </div>
       </div>
     </section>
