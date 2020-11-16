@@ -1,7 +1,7 @@
 .footer__socials-container {
   position: absolute;
   top: 22px;
-  right: 0;
+  right: 16px;
 }
 
 @media all and (min-width: 768px) {

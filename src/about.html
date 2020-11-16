@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="<%=require('./images/favicon.png').default%>" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
+  <meta name="description" content="Страница с описанием проекта">
+  <meta name="author" content="Федор Переверзев"/>
+  <title>Дипломная работа</title>
+</head>
+
+<body>
+
+  <header class="header header_theme_black">
+    <h1 class="header__logo">NewsAnalyzer</h1>
+    <nav class="header__nav">
+      <ul class="header__menu">
+        <li class="header__menu-item"><a href="./index.html" class="header__menu-link">Главная</a></li>
+        <li class="header__menu-item"><a href="/" class="header__menu-link header__menu-link_isActive">О проекте</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="clients">
+      <div class="clients__container">
+        <h3 class="clients__title content-title">
+          Клиентам
+        </h3>
+        <div class="clients__text-content">
+          <p class="clients__paragraph"> Этот сайт — дипломный проект студента Яндекс.Практикума. Его цель — показать,
+            чему научился студент,
+            какими технологиями владеет.
+          </p>
+          <p class="clients__paragraph"> Вёрстка сайта выполнена по методологии БЭМ. Это делает сайт гибким и
+            масштабируемым. Кроме того, добавлять
+            новые страницы и функциональность проще и быстрее, чем в проектах, выполненных по другим методологиям. Также
+            сайт проще и дешевле поддерживать.
+          </p>
+          <p class="clients__paragraph"> Карточки с новостями приходят с сервера и обрабатываются асинхронно. То есть
+            сайт продолжает работать,
+            пока от сервера приходит ответ. Это повышает удобство использования сервиса.
+          </p>
+          <p class="clients__paragraph"> При создании проекта была использована сборка технологией Webpack. Это
+            современный подход к разработке
+            сайтов. Код оптимизируется, а значит, сайт работает быстрее. Также сайт работает в старых браузерах. Даже
+            если посетители — пользователи старых операционных систем, у них не будет проблем с отображением. А значит,
+            потенциальная аудитория возрастает.
+          </p>
+          <p class="clients__paragraph"> Проект был проверен экспертами Яндекс.Практикума. Если вашему бизнесу нужен
+            сайт, мы рекомендуем
+            обратиться к этому студенту.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="about container">
+      <img class="about__image" src="<%=require('./images/student.png').default%>" alt="Фото студента">
+      <div class="about__description">
+        <h3 class="content-title">
+          Об авторе
+        </h3>
+        <p class="content-subtitle">
+          Это блок с описанием автора проекта.
+          Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владеете.
+          Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь
+          потенциальным заказчикам.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p class="footer__copyright">&copy; 2020. Федор Переверзев</p>
+    <nav class="footer__nav">
+      <ul class="footer__menu">
+        <li class="footer__menu-item"><a class="footer__menu-link" href="./index.html">Главная</a></li>
+        <li class="footer__menu-item"><a class="footer__menu-link" href="/">О проекте</a></li>
+        <li class="footer__menu-item">
+          <a class="footer__menu-link" target="_blank" rel="noopener noreferrer"
+            href="https://praktikum.yandex.ru/">Яндекс.Практикум
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div class="footer__socials-container">
+      <a class="footer__social-link" href="#"><img src="<%=require('./images/gihub-logo.svg').default%>"
+          alt="Логотип Github"></a>
+      <a class="footer__social-link" href="#"><img src="<%=require('./images/facebook-logo.svg').default%>"
+          alt="Логотип Facebook"></a>
+    </div>
+  </footer>
+
+  <script src="<%= htmlWebpackPlugin.files.js %>"></script>
+</body>
+
+</html>

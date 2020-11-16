@@ -1,0 +1,20 @@
+.clients__container {
+  max-width: 288px;
+  margin: 16px auto 32px auto;
+}
+
+
+@media all and (min-width: 768px) {
+  .clients__container {
+    margin: 30px auto 40px auto;
+    max-width: 688px;;
+  }
+}
+
+
+@media all and (min-width: 1440px) {
+  .clients__container {
+    margin: 80px auto 94px auto;
+    max-width: 1120px;;
+  }
+}
