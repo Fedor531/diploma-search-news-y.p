@@ -1,0 +1,13 @@
+.diagram__subtitle {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: #B6BCBF;
+  display: flex;
+  border-bottom: 1px solid #1A1B22;
+  padding-bottom: 8px;
+}

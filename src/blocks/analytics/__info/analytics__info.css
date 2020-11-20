@@ -1,0 +1,24 @@
+.analytics__info {
+  margin: 16px auto 24px auto;
+  max-width: 288px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #1A1B22;
+}
+
+@media all and (min-width: 768px) {
+  .analytics__info {
+    margin: 0 auto 40px auto;
+    max-width: 688px;
+  }
+}
+
+@media all and (min-width: 1440px) {
+  .analytics__info {
+    max-width: 1120px;
+    margin: 0 auto 80px auto;
+  }
+}

@@ -10,13 +10,19 @@
   border: none;
   width: 288px;
   margin: 12px auto 0 auto;
-  padding: 15px 0;
-  transition: .2s ease-in-out;
+  padding: 14px 0;
   cursor: pointer;
+  border: 2px solid transparent;
+  outline: none;
 }
 
 .search-results__show-more-button:hover {
+  transition: .2s ease-in-out;
   opacity: .9;
+}
+
+.search-results__show-more-button:focus {
+  border: 2px solid #1A1B22;
 }
 
 @media all and (min-width: 768px) {

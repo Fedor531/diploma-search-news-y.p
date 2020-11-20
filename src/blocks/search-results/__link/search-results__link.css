@@ -9,6 +9,11 @@
   display: flex;
   align-items: center;
   margin-top: 16px;
+  transition: .2s ease-in-out;
+}
+
+.search-results__link:hover {
+  color: rgb(0, 0, 0, .7);
 }
 
 @media all and (min-width: 768px) {

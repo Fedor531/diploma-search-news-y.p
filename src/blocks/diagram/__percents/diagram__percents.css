@@ -1,0 +1,25 @@
+.diagram__percents {
+  display: none;
+}
+
+@media all and (min-width: 768px) {
+  .diagram__percents  {
+    margin-left: 96px;
+    display: flex;
+    margin-top: 16px;
+    justify-content: space-between;
+    max-width: 590px;
+  }
+}
+
+@media all and (min-width: 1440px) {
+  .diagram__percents  {
+    margin-left: 96px;
+    display: flex;
+    margin-top: 16px;
+    justify-content: space-between;
+    max-width: 1054px;
+  }
+}
+
+

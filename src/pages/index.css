@@ -14,6 +14,9 @@
 @import url(../blocks/card/card.css);
 @import url(../blocks/clients/clients.css);
 @import url(../blocks/technology/technology.css);
+@import url(../blocks/analytics/analytics.css);
+@import url(../blocks/breadcrumbs/breadcrumbs.css);
+@import url(../blocks/diagram/diagram.css);
 
 
 *, *::before, *::after {
