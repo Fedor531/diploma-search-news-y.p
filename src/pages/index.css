@@ -17,6 +17,10 @@
 @import url(../blocks/analytics/analytics.css);
 @import url(../blocks/breadcrumbs/breadcrumbs.css);
 @import url(../blocks/diagram/diagram.css);
+@import url(../blocks/link/link.css);
+@import url(../blocks/github/github.css);
+@import url(../blocks/slider/slider.css);
+@import url(../blocks/slide/slide.css);
 
 
 *, *::before, *::after {

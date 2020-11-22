@@ -1,0 +1,27 @@
+.github__button {
+  display: block;
+  border: 1px solid #1A1B22;
+  box-sizing: border-box;
+  border-radius: 80px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  color: #1A1B22;
+  text-decoration: none;
+  width: 288px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 16px 0;
+}
+
+.github__button:hover {
+  transition: .2s ease-in-out;
+  background-color: #fff;
+}
+
+@media all and (min-width: 768px) {
+  .github__button {
+    display: none;
+  }
+}

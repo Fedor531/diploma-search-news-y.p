@@ -1,0 +1,23 @@
+@import url(./__points/slider__points.css);
+@import url(./__point/slider__point.css);
+@import url(./__point/slider__point_type_isActive.css);
+
+.slider {
+  max-width: 288px;
+  margin: 16px auto;
+}
+
+@media all and (min-width: 768px) {
+  .slider {
+    max-width: 688px;
+    margin: 32px auto 0 auto;
+  }
+}
+
+@media all and (min-width: 1440px) {
+  .slider {
+    max-width: 1120px;
+    margin: 64px auto 0 auto;
+  }
+}
+

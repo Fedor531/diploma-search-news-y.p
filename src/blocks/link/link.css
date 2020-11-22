@@ -1,4 +1,6 @@
-.search-results__link {
+@import url(./__text/link__text.css);
+
+.link {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
@@ -6,18 +8,17 @@
   line-height: 24px;
   color: #1A1B22;
   text-decoration: none;
-  display: flex;
   align-items: center;
   margin-top: 16px;
   transition: .2s ease-in-out;
 }
 
-.search-results__link:hover {
+.link:hover {
   color: rgb(0, 0, 0, .7);
 }
 
 @media all and (min-width: 768px) {
-  .search-results__link {
+  .link {
     margin: 0;
   }
 }
