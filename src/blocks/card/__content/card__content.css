@@ -1,0 +1,16 @@
+.card__content {
+  padding: 16px 16px 20px 16px;
+}
+
+@media all and (min-width: 768px) {
+  .card__content {
+    padding: 16px;
+  }
+}
+
+@media all and (min-width: 1440px) {
+  .card__content {
+    padding: 20px 24px 24px 24px;
+  }
+}
+

@@ -1,0 +1,10 @@
+.link__text {
+  margin: 0 7px 0 0;
+}
+
+
+@media all and (min-width: 768px) {
+  .link__text {
+    margin: 0 10px 0 0;
+  }
+}

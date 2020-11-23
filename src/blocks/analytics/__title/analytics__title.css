@@ -1,0 +1,9 @@
+.analytics__title {
+  margin-bottom: 16px;
+}
+
+@media all and (min-width: 768px) {
+  .analytics__title {
+    margin-bottom: 24px;
+  }
+}

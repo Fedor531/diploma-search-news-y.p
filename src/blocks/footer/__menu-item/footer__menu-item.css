@@ -1,0 +1,21 @@
+.footer__menu-item {
+    list-style: none;
+}
+
+@media all and (min-width: 768px) {
+  .footer__menu-item {
+    margin-right: 25px;
+  }
+  .footer__menu-item:last-child {
+    margin-right: 0;
+  }
+}
+
+@media all and (min-width: 1440px) {
+  .footer__menu-item {
+    margin-right: 40px;
+  }
+}
+
+
+

@@ -1,0 +1,39 @@
+@import url(./__date/card__date.css);
+@import url(./__image/card__image.css);
+@import url(./__source/card__source.css);
+@import url(./__subtitle/card__subtitle.css);
+@import url(./__title/card__title.css);
+@import url(./__content/card__content.css);
+
+.card {
+  max-width: 288px;
+  max-height: 446px;
+  background: #FFFFFF;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.card:last-child {
+  margin-bottom: 0;
+}
+
+@media all and (min-width: 768px) {
+  .card {
+    max-width: 224px;
+    max-height: 420px;
+  }
+  .card:last-child {
+    margin-bottom: 8px;
+  }
+}
+
+@media all and (min-width: 1440px) {
+  .card {
+    max-width: 400px;
+    max-height: 576px;
+    margin-bottom: 16px;
+  }
+  .card:last-child {
+    margin-bottom: 16px;
+  }
+}

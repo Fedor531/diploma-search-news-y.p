@@ -1,0 +1,15 @@
+.diagram__analytics-day {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  color: #1A1B22;
+  margin: 0 16px 0 0;
+  width: 64px;
+}
+
+@media all and (min-width: 768px) {
+  .diagram__analytics-day  {
+    margin: 0 32px 0 0;
+  }
+}

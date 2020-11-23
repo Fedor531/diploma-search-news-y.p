@@ -1,0 +1,7 @@
+.clients__paragraph:first-child {
+  margin-top: 0;
+}
+
+.clients__paragraph:last-child {
+  margin-bottom: 0;
+}

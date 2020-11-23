@@ -1,0 +1,44 @@
+.search-results__show-more-button {
+  display: block;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  background: #FFFFFF;
+  border-radius: 80px;
+  border: none;
+  width: 288px;
+  margin: 12px auto 0 auto;
+  padding: 14px 0;
+  cursor: pointer;
+  border: 2px solid transparent;
+  outline: none;
+}
+
+.search-results__show-more-button:hover {
+  transition: .2s ease-in-out;
+  opacity: .9;
+}
+
+.search-results__show-more-button:focus {
+  border: 2px solid #1A1B22;
+}
+
+@media all and (min-width: 768px) {
+  .search-results__show-more-button {
+    width: 240px;
+    margin: 24px auto 0 auto;
+  }
+}
+
+@media all and (min-width: 1440px) {
+  .search-results__show-more-button {
+    margin: 48px auto 0 auto;
+    padding: 18px 0;
+    width: 288px;
+  }
+}
+
+
+

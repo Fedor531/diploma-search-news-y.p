@@ -1,0 +1,8 @@
+.diagram__analytics-result {
+  margin: 0;
+  height: 24px;
+  width: 15%;
+  background: #2F71E5;
+  display: flex;
+  align-items: center;
+}

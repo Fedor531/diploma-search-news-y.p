@@ -1,0 +1,20 @@
+.slider__points {
+  display: flex;
+  justify-content: center;
+  margin: 16px auto 0 auto;
+}
+
+
+
+@media all and (min-width: 768px) {
+  .slider__points {
+    margin: 32px auto 0 auto;
+  }
+}
+
+@media all and (min-width: 1440px) {
+  .slider__points {
+    margin: 48px auto 0 auto;
+  }
+}
+

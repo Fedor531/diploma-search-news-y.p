@@ -1,0 +1,27 @@
+@import url(./__sought-item/breadcrumbs__sought-item.css);
+
+.breadcrumbs {
+  display: none;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #1A1B22;
+  margin: 32px auto 64px auto;
+}
+
+@media all and (min-width: 768px) {
+  .breadcrumbs {
+    max-width: 688px;
+    display: block;
+  }
+}
+
+@media all and (min-width: 1440px) {
+  .breadcrumbs {
+    max-width: 1120px;
+    margin: 40px auto 80px auto;
+  }
+}
+

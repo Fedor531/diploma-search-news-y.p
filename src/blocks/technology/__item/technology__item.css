@@ -1,0 +1,13 @@
+.technology__item {
+  width: 120px;
+}
+
+
+@media all and (min-width: 1440px) {
+  .technology__item {
+    margin-right: 40px;
+  }
+  .technology__item:last-child {
+    margin-right: 0;
+  }
+}

@@ -1,0 +1,10 @@
+@import url(./__container/technology__container.css);
+@import url(./__items/technology__items.css);
+@import url(./__item/technology__item.css);
+@import url(./__item-name/technology__item-name.css);
+@import url(./__item-image/technology__item-image.css);
+@import url(./__title/technology__title.css);
+
+.technology {
+  background-color: #F5F6F7;
+}

@@ -1,0 +1,30 @@
+@import url(./__date/slide__date.css);
+@import url(./__author-container/slide__author-container.css);
+@import url(./__author-avatar/slide__author-avatar.css);
+@import url(./__author-info/slide__author-info.css);
+@import url(./__author-name/slide__author-name.css);
+@import url(./__author-email/slide__author-email.css);
+@import url(./__commit-text/slide__commit-text.css);
+@import url(./__container/slide__container.css);
+
+.slide {
+  background: #FFFFFF;
+  border-radius: 16px;
+  max-width: 288px;
+  height: 264px;
+}
+
+@media all and (min-width: 768px) {
+  .slide {
+    max-width: 336px;
+    height: 242px;
+  }
+}
+
+@media all and (min-width: 1440px) {
+  .slide {
+    height: 288px;
+    max-width: 400px;
+  }
+}
+

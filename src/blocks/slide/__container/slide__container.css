@@ -1,0 +1,11 @@
+.slide__container {
+  padding: 16px;
+}
+
+
+@media all and (min-width: 768px) {
+  .slide__container {
+    padding: 24px;
+  }
+}
+

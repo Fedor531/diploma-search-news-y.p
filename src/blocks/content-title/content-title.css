@@ -1,0 +1,16 @@
+.content-title {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 40px;
+  color: #1A1B22;
+  margin: 0;
+}
+
+@media all and (min-width: 1440px) {
+  .content-title {
+    font-size: 40px;
+    line-height: 46px;
+  }
+}

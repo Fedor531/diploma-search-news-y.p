@@ -1,0 +1,5 @@
+@media all and (min-width: 1440px) {
+  .technology__title {
+    max-width: 350px;
+  }
+}

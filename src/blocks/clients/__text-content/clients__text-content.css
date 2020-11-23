@@ -1,0 +1,14 @@
+.clients__text-content {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #1A1B22;
+}
+
+@media all and (min-width: 1440px) {
+  .clients__text-content {
+    max-width: 815px;
+  }
+}
