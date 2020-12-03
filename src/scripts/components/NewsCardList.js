@@ -1,6 +1,7 @@
 export default class NewsCardList {
-  constructor($container) {
-    this.$container = $container
+  constructor($container, buildCardItem) {
+    this.$container = $container;
+    this.buildCardItem = buildCardItem;
   }
 
   _addCard(placeElement) {
@@ -9,7 +10,8 @@ export default class NewsCardList {
 
   renderCards(cards) {
     cards.forEach(item => {
-      console.log(item)
+      const newsCard = this.buildCardItem(item)
+      this._addCard(newsCard.createCardHtml())
     });
   }
 
