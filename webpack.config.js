@@ -7,15 +7,17 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
-const isDev = process.env.NODE_ENV === 'development';
-
 module.exports = {
 
-  entry: { main: './src/scripts/main.js' }, // Точка входа
+  entry: {
+    index: './src/index.js',
+    about: './src/about/about.js',
+    analytics: './src/analytics/analytics.js'
+  }, // Точка входа
 
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].[chunkhash].js'
+    filename: '[name].[chunkhash].js'/* При сборке в [name] будут записаны разные названия js-файлов */
   },
 
   resolve: {
@@ -32,7 +34,7 @@ module.exports = {
     {
       test: /\.css$/i,
       use: [
-        (isDev ? 'style-loader' : MiniCssExtractPlugin.loader), 'css-loader', 'postcss-loader'
+         MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'
       ]
     },
     {
@@ -57,7 +59,7 @@ module.exports = {
 
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'index.[contenthash].css',
+      filename: '[name].[contenthash].css',
     }),
     new OptimizeCssAssetsPlugin({
       assetNameRegExp: /\.css$/g,
@@ -71,19 +73,22 @@ module.exports = {
       inject: false,
       hash: true,
       template: './src/index.html',
-      filename: 'index.html'
+      filename: 'index.html',
+      chunks: ['index']
     }),
     new HtmlWebpackPlugin({
       inject: false,
       hash: true,
-      template: './src/about.html',
-      filename: 'about.html'
+      template: './src/about/about.html',
+      filename: 'about.html',
+      chunks: ['about']
     }),
     new HtmlWebpackPlugin({
       inject: false,
       hash: true,
-      template: './src/analytics.html',
-      filename: 'analytics.html'
+      template: './src/analytics/analytics.html',
+      filename: 'analytics.html',
+      chunks: ['analytics']
     }),
     new WebpackMd5Hash(),
     new webpack.DefinePlugin({

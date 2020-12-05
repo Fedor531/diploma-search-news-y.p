@@ -8,14 +8,14 @@
 @media all and (min-width: 768px) {
   .cards {
     flex-direction: row;
-    justify-content: space-between;
-    max-width: 688px;
+    justify-content: left;
+    max-width: 696px;
     margin: 0 auto;
   }
 }
 
 @media all and (min-width: 1440px) {
   .cards {
-    max-width: 1236px;
+    max-width: 1248px;
   }
 }
