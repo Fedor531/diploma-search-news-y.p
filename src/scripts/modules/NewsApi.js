@@ -27,7 +27,7 @@ export default class NewsApi {
 
   getNews(titleNews) {
     this._setDateInfo()
-    return fetch(`https://newsapi.org/v2/everything?q=${titleNews}&from=${this._pastDate}&to=${this._todayDate}&pageSize=${this.pageSize}&apiKey=${this.apiKey}`)
+    return fetch(`https://nomoreparties.co/news/v2/everything?q=${titleNews}&from=${this._pastDate}&to=${this._todayDate}&pageSize=${this.pageSize}&apiKey=${this.apiKey}`)
       .then(res => {
         return this._getResponseData(res)
       })
