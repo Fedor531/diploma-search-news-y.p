@@ -23,6 +23,8 @@ export default class NewsApi {
     this._pastDate = `${pastDate.getFullYear()}-${pastDate.getMonth() + 1}-${pastDate.getDate()}`
   }
 
+
+
   getNews(titleNews) {
     this._setDateInfo()
     return fetch(`https://newsapi.org/v2/everything?q=${titleNews}&from=${this._pastDate}&to=${this._todayDate}&pageSize=${this.pageSize}&apiKey=${this.apiKey}`)

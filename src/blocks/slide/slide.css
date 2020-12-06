@@ -8,6 +8,7 @@
 @import url(./__container/slide__container.css);
 
 .slide {
+  cursor: pointer;
   background: #FFFFFF;
   border-radius: 16px;
   max-width: 288px;

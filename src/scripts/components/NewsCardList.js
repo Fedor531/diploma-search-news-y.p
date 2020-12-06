@@ -6,8 +6,8 @@ export default class NewsCardList {
     this._cardNumbers = 3;
   }
 
-  _addCard(placeElement) {
-    this.$container.appendChild(placeElement)
+  _addCard(cardElement) {
+    this.$container.appendChild(cardElement)
   }
 
   renderCards(cards) {

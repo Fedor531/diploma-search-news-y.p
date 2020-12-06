@@ -2,11 +2,13 @@ import './index.css'
 import NewsApi from './scripts/modules/NewsApi'
 import NewsCardList from './scripts/components/NewsCardList'
 import NewsCard from './scripts/components/NewsCard'
+import { createTimeFormat } from './scripts/utils/helpers'
 
 const $preloader = document.querySelector('.preloader')
 const $searchResultsContainer = document.querySelector('.search-results')
 const $newsCardsContainer = document.querySelector('.cards')
 const $nothingFoundContainer = document.querySelector('.nothing-found')
+const $nothingFoundServerContainer = document.querySelector('.nothing-found-server')
 
 const $searchForm = document.querySelector('.search-news__form')
 const $searchInput = document.querySelector('.search-news__input')
@@ -16,44 +18,65 @@ const newsApiConfig = {
   apiKey: 'a3d7340b4fb145859582c09cb7e3de16',
   pageSize: 100
 }
-console.log('меня видно')
 
-const buildCardItem = (cardData) => new NewsCard(cardData)
+const buildCardItem = (cardData) => new NewsCard(cardData, createTimeFormat)
 
 const newsCardList = new NewsCardList($newsCardsContainer, buildCardItem)
 const api = new NewsApi(newsApiConfig)
 
+function renderState(state) {
+  switch (state) {
+    case 'loading':
+      $preloader.setAttribute('style', 'display:block')
+      $nothingFoundContainer.setAttribute('style', 'display:none')
+      $searchResultsContainer.setAttribute('style', 'display:none')
+      $nothingFoundServerContainer.setAttribute('style', 'display:none')
+      break;
+    case 'nothing found':
+      $nothingFoundContainer.setAttribute('style', 'display:block')
+      break;
+    case 'card ready':
+      $searchResultsContainer.setAttribute('style', 'display:block')
+      break;
+    case 'no response from server':
+      $nothingFoundServerContainer.setAttribute('style', 'display:block')
+      break;
+    case 'end':
+      $preloader.setAttribute('style', 'display:none')
+      break;
+  }
+}
+
+// Функция поиска новостей
 function seacrhNews(event) {
   event.preventDefault()
-  $preloader.setAttribute('style', 'display:block')
-  $nothingFoundContainer.setAttribute('style', 'display:none')
-  $searchResultsContainer.setAttribute('style', 'display:none')
+  renderState('loading')
   api.getNews($searchInput.value.trim())
     .then((res) => {
-      console.log(res)
+      localStorage.setItem('data', JSON.stringify({ searchValue: $searchInput.value.trim(), res }))
       const cards = res.articles
       if (cards.length === 0) {
-        $nothingFoundContainer.setAttribute('style', 'display:block')
-       } else {
-        localStorage.setItem('myCat', 'Tom');
+        renderState('nothing found')
+      } else {
         newsCardList.renderCards(cards)
-        $searchResultsContainer.setAttribute('style', 'display:block')
-       }
+        renderState('card ready')
+      }
     })
     .catch((err) => {
+      renderState('no response from server')
       console.log(err)
     })
     .finally(() => {
-      $preloader.setAttribute('style', 'display:none')
+      renderState('end')
     })
 }
 
+// Функция вывода дополнительных карточек с новостями
 function showMoreCards() {
   newsCardList.renderCards()
 }
 
 
+// Слушатели
 $showMoreCardsButton.addEventListener('click', showMoreCards)
 $searchForm.addEventListener('submit', seacrhNews)
-
-
