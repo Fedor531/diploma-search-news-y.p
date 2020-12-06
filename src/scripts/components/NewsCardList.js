@@ -1,6 +1,7 @@
 export default class NewsCardList {
-  constructor($container, buildCardItem) {
+  constructor($container, buildCardItem, $showMoreCardsButton) {
     this.$container = $container;
+    this.$showMoreCardsButton = $showMoreCardsButton
     this.buildCardItem = buildCardItem;
     this._cards = null;
     this._cardNumbers = 3;
@@ -21,6 +22,10 @@ export default class NewsCardList {
       this._addCard(newsCard.createCardHtml())
       if ((index + 1) === this._cardNumbers) {
         this._cardNumbers += 3
+        // Проверка для удаления кнопки "Показать ещё"
+        if(this._cardNumbers >= this._cards.length) {
+          this.$showMoreCardsButton.setAttribute('style', 'display: none')
+        }
         return true
       }
     });

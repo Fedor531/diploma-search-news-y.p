@@ -2,6 +2,7 @@ import './index.css'
 import NewsApi from './scripts/modules/NewsApi'
 import NewsCardList from './scripts/components/NewsCardList'
 import NewsCard from './scripts/components/NewsCard'
+import DataStorage from './scripts/modules/DataStorage'
 import { createTimeFormat } from './scripts/utils/helpers'
 
 const $preloader = document.querySelector('.preloader')
@@ -19,10 +20,11 @@ const newsApiConfig = {
   pageSize: 100
 }
 
-const buildCardItem = (cardData) => new NewsCard(cardData, createTimeFormat)
-
-const newsCardList = new NewsCardList($newsCardsContainer, buildCardItem)
 const api = new NewsApi(newsApiConfig)
+const dataStorage = new DataStorage()
+const buildCardItem = (cardData) => new NewsCard(cardData, createTimeFormat)
+const newsCardList = new NewsCardList($newsCardsContainer, buildCardItem, $showMoreCardsButton)
+
 
 function renderState(state) {
   switch (state) {
@@ -38,7 +40,7 @@ function renderState(state) {
     case 'card ready':
       $searchResultsContainer.setAttribute('style', 'display:block')
       break;
-    case 'no response from server':
+    case 'error':
       $nothingFoundServerContainer.setAttribute('style', 'display:block')
       break;
     case 'end':
@@ -51,10 +53,13 @@ function renderState(state) {
 function seacrhNews(event) {
   event.preventDefault()
   renderState('loading')
-  api.getNews($searchInput.value.trim())
-    .then((res) => {
-      localStorage.setItem('data', JSON.stringify({ searchValue: $searchInput.value.trim(), res }))
-      const cards = res.articles
+  const searchTextValue = $searchInput.value.trim()
+
+  api.getNews(searchTextValue)
+    .then((data) => {
+      dataStorage.setData({ searchValue: searchTextValue, data })
+      const cards = data.articles
+      // Проверка на отсутствие карточек
       if (cards.length === 0) {
         renderState('nothing found')
       } else {
@@ -63,7 +68,7 @@ function seacrhNews(event) {
       }
     })
     .catch((err) => {
-      renderState('no response from server')
+      renderState('error')
       console.log(err)
     })
     .finally(() => {

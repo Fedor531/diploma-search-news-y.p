@@ -1,8 +1,11 @@
 import './analytics.css'
 import Statistics from '../scripts/components/Statistics'
+import DataStorage from '../scripts/modules/DataStorage'
 
-const data = localStorage.getItem('data')
+const dataStorage = new DataStorage()
 
-const statistics = new Statistics(JSON.parse(data))
+const data = dataStorage.getData('data')
+
+const statistics = new Statistics(data)
 
 statistics.init()

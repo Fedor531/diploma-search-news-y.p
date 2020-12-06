@@ -6,7 +6,7 @@ export default class CommitCard {
 
   createCardHtml() {
     const markUp = `
-    <li class="glide__slide slide">
+    <li class="slide glide__slide" style="height: 220px">
     <div class="slide__container">
       <p class="slide__date">${this.createTimeFormat(this._cardData.commit.committer.date)}</p>
       <div class="slide__author-container">
