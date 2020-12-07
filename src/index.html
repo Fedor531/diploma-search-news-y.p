@@ -46,6 +46,11 @@
       <p class="nothing-found__subtitle">К сожалению по вашему запросу ничего не найдено.</p>
     </div>
 
+    <div class="nothing-found nothing-found-server container">
+      <img class="nothing-found__image" src="<%=require('./images/not-found.svg').default%>" alt="Грустная картинка">
+      <p class="nothing-found__title">Неизвестная ошибка</p>
+    </div>
+
     <div class="preloader container">
       <i class="preloader__circle"></i>
       <p class="preloader__text">Идет поиск новостей...</p>
@@ -62,42 +67,13 @@
         </a>
       </div>
       <div class="cards">
-        <div class="card">
-          <img class="card__image" src="<%=require('./images/card-image1.png').default%>" alt="">
-          <div class="card__content">
-            <p class="card__date">2 августа, 2019</p>
-            <p class="card__title">Национальное достояние – парки</p>
-            <p class="card__subtitle">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складыв...
-            </p>
-            <p class="card__source">Лента.ру</p>
-          </div>
-        </div>
-        <div class="card">
-          <img class="card__image" src="<%=require('./images/card-image2.png').default%>" alt="">
-          <div class="card__content">
-            <p class="card__date">2 августа, 2019</p>
-            <p class="card__title">Лесные огоньки: история одной фотографии</p>
-            <p class="card__subtitle">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складыв...
-            </p>
-            <p class="card__source">Лента.ру</p>
-          </div>
-        </div>
-        <div class="card">
-          <img class="card__image" src="<%=require('./images/card-image3.png').default%>" alt="">
-          <div class="card__content">
-            <p class="card__date">2 августа, 2019</p>
-            <p class="card__title">Национальное достояние – парки</p>
-            <p class="card__subtitle">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складыв...
-            </p>
-            <p class="card__source">Лента.ру</p>
-          </div>
-        </div>
+
       </div>
       <button class="search-results__show-more-button">Показать еще</button>
     </section>
 
     <section class="about container">
-      <img class="about__image" src="<%=require('./images/student.png').default%>" alt="Фото студента">
+      <img class="about__image" src="<%=require('./images/avatar.jpg').default%>" alt="Фото студента">
       <div class="about__description">
         <h3 class="content-title">
           Об авторе

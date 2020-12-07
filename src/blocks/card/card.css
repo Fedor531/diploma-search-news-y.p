@@ -7,7 +7,7 @@
 
 .card {
   max-width: 288px;
-  max-height: 446px;
+  height: 446px;
   background: #FFFFFF;
   border-radius: 8px;
   margin-bottom: 8px;
@@ -20,20 +20,21 @@
 @media all and (min-width: 768px) {
   .card {
     max-width: 224px;
-    max-height: 420px;
+    height: 420px;
+    margin: 0 4px 8px 4px;
   }
   .card:last-child {
-    margin-bottom: 8px;
+    margin: 0 4px 8px 4px;
   }
 }
 
 @media all and (min-width: 1440px) {
   .card {
     max-width: 400px;
-    max-height: 576px;
-    margin-bottom: 16px;
+    height: 576px;
+    margin: 0 8px 16px 8px;
   }
   .card:last-child {
-    margin-bottom: 16px;
+    margin: 0 8px 16px 8px;
   }
 }

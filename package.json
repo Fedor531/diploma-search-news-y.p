@@ -45,6 +45,7 @@
     "gh-pages": "^2.2.0"
   },
   "dependencies": {
+    "@glidejs/glide": "^3.4.1",
     "babel-polyfill": "^6.26.0",
     "core-js": "^3.4.1"
   }

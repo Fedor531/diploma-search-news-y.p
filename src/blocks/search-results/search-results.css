@@ -3,5 +3,6 @@
 @import url(./__title-button/search-results__title-button.css);
 
 .search-results {
+  display: none;
   background-color: #E5E5E5;
 }
