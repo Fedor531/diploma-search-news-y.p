@@ -11,6 +11,7 @@
   background: #FFFFFF;
   border-radius: 8px;
   margin-bottom: 8px;
+  text-decoration: none;
 }
 
 .card:last-child {

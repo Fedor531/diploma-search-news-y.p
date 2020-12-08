@@ -17,7 +17,8 @@ const showMoreCardsButton = document.querySelector('.search-results__show-more-b
 
 const newsApiConfig = {
   apiKey: 'a3d7340b4fb145859582c09cb7e3de16',
-  pageSize: 100
+  pageSize: 100,
+  totalDayNews: 7
 }
 
 const api = new NewsApi(newsApiConfig)

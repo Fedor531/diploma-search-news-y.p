@@ -2,6 +2,7 @@ export default class NewsApi {
   constructor(config) {
     this.apiKey = config.apiKey
     this.pageSize = config.pageSize
+    this.totalDayNews = config.totalDayNews
     this._todayDate = null
     this._pastDate = null
   }
@@ -19,7 +20,7 @@ export default class NewsApi {
     this._todayDate = todayDate
 
     const pastDate = new Date()
-    pastDate.setDate(pastDate.getDate() - 7);
+    pastDate.setDate(pastDate.getDate() - this.totalDayNews);
     this._pastDate = `${pastDate.getFullYear()}-${pastDate.getMonth() + 1}-${pastDate.getDate()}`
   }
 
