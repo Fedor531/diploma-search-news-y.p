@@ -9,18 +9,23 @@ export default class NewsCard {
 
     const markUp = `
     <div class="card">
-      <img class="card__image" src="${this._cardImage}" alt="Картинка новости">
+      <img class="card__image" alt="Картинка новости">
       <div class="card__content">
-        <p class="card__date">${this.createTimeFormat(this._cardData.publishedAt)}</p>
-        <p class="card__title">${this._cardData.title}</p>
-        <div class="card__subtitle">${this._cardData.description}</div>
-        <p class="card__source">${this._cardData.source.name}</p>
+        <p class="card__date"></p>
+        <p class="card__title"></p>
+        <div class="card__subtitle"></div>
+        <p class="card__source"></p>
       </div>
     </div>`;
 
-    const element = document.createElement('div');
-    element.insertAdjacentHTML('afterbegin', markUp.trim());
-    return element.firstElementChild;
+    const element = document.createElement('div')
+    element.insertAdjacentHTML('afterbegin', markUp.trim())
+    this.cardElement = element.firstElementChild
+    this.cardElement.querySelector('.card__image').src = this._cardImage
+    this.cardElement.querySelector('.card__date').textContent = this.createTimeFormat(this._cardData.publishedAt)
+    this.cardElement.querySelector('.card__title').textContent = this._cardData.title
+    this.cardElement.querySelector('.card__subtitle').textContent = this._cardData.description
+    this.cardElement.querySelector('.card__source').textContent = this._cardData.source.name
+    return this.cardElement
   }
-
 }

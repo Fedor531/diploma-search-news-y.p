@@ -6,11 +6,11 @@ import GithubApi from '../scripts/modules/GithubApi'
 import { createTimeFormat } from '../scripts/utils/helpers'
 import Glide from '@glidejs/glide'
 
-const $commitCardsContainer = document.querySelector('.glide__slides')
+const commitCardsContainer = document.querySelector('.glide__slides')
 
 const buildCardItem = (cardData) => new CommitCard(cardData, createTimeFormat)
 
-const commitCardList = new CommitCardList($commitCardsContainer, buildCardItem)
+const commitCardList = new CommitCardList(commitCardsContainer, buildCardItem)
 const githubApi = new GithubApi()
 
 githubApi.getCommits()
