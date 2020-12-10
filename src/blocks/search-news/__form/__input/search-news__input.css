@@ -6,6 +6,7 @@
   line-height: 22px;
   border: 1px solid #D1D2D6;
   backdrop-filter: blur(100px);
+  background-color: #fff;
   border-radius: 100px;
   height: 56px;
   width: 288px;
@@ -16,8 +17,16 @@
   border: 2px solid transparent;
 }
 
+.search-news__input:disabled {
+  cursor: no-drop;
+}
+
 .search-news__input:focus {
   border: 2px solid #2F71E5;
+}
+
+.search-news__input:disabled:focus {
+  border: 2px solid #c3c3c3;
 }
 
 @media all and (min-width: 768px) {

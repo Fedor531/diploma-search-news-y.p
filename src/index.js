@@ -13,6 +13,7 @@ const nothingFoundServerContainer = document.querySelector('.nothing-found-serve
 
 const searchForm = document.querySelector('.search-news__form')
 const searchInput = document.querySelector('.search-news__input')
+const searchButton = document.querySelector('.search-news__button')
 const showMoreCardsButton = document.querySelector('.search-results__show-more-button')
 
 const newsApiConfig = {
@@ -34,6 +35,8 @@ function renderState(state) {
       nothingFoundContainer.setAttribute('style', 'display:none')
       searchResultsContainer.setAttribute('style', 'display:none')
       nothingFoundServerContainer.setAttribute('style', 'display:none')
+      searchButton.setAttribute('disabled', 'disabled')
+      searchInput.setAttribute('disabled', 'disabled')
       break;
     case 'nothing found':
       nothingFoundContainer.setAttribute('style', 'display:block')
@@ -45,6 +48,8 @@ function renderState(state) {
       nothingFoundServerContainer.setAttribute('style', 'display:block')
       break;
     case 'end':
+      searchButton.removeAttribute('disabled')
+      searchInput.removeAttribute('disabled')
       preloader.setAttribute('style', 'display:none')
       break;
   }
@@ -81,6 +86,21 @@ function seacrhNews(event) {
 function showMoreCards() {
   newsCardList.renderCards()
 }
+
+function checkCardsInStorage() {
+  if (dataStorage.getData('data')) {
+    const cards = dataStorage.getData('data').data.articles
+    // Проверка на отсутствие карточек
+    if (cards.length === 0) {
+      renderState('nothing found')
+    } else {
+      newsCardList.renderCards(cards)
+      renderState('card ready')
+    }
+  }
+}
+
+checkCardsInStorage()
 
 
 // Слушатели

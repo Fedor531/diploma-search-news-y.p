@@ -13,14 +13,27 @@
   border: none;
   cursor: pointer;
   padding: 0;
+  transition: .3s ease-in-out;
+}
+
+.search-news__button:disabled {
+  cursor: no-drop;
+  background: #c3c3c3;
+}
+
+.search-news__button:hover:disabled {
+  background: #c3c3c3;
+}
+
+.search-news__button:active:disabled {
+  background: #c3c3c3;
 }
 
 .search-news__button:hover {
-  transition: .2s ease-in-out;
   background: #347EFF;
 }
 
-.search-news__button:focus {
+.search-news__button:active {
   background: #2A65CC;
 }
 
