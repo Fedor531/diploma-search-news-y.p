@@ -1,7 +1,5 @@
 .search-results__show-more-button {
   display: block;
-  font-family: 'Roboto';
-  font-style: normal;
   font-weight: 500;
   font-size: 18px;
   line-height: 24px;
@@ -14,15 +12,17 @@
   cursor: pointer;
   border: 2px solid transparent;
   outline: none;
+  transition: .3s ease-in-out;
 }
 
 .search-results__show-more-button:hover {
-  transition: .2s ease-in-out;
-  opacity: .9;
+  background: #1a1b22;
+  color: #fff;
 }
 
 .search-results__show-more-button:focus {
-  border: 2px solid #1A1B22;
+  border: none;
+  outline: none;
 }
 
 @media all and (min-width: 768px) {
