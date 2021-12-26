@@ -19,4 +19,4 @@ npm run build
 ```
 npm run serve
 ```
-#### Ссылка: https://fedor531.github.io/service-mesto-y.p/
+#### Ссылка: https://fedor531.github.io/search-news-y.p/
