@@ -14,13 +14,13 @@ const commitCardList = new CommitCardList($commitCardsContainer, buildCardItem)
 const githubApi = new GithubApi()
 
 githubApi.getCommits()
-  .then((res) => {
-    commitCardList.renderCards(res)
-    new Glide('.glide').mount()
-  })
-  .catch((err) => {
-    console.log(err)
-  })
-  .finally(() => {
+    .then((res) => {
+        commitCardList.renderCards(res)
+        new Glide('.glide').mount()
+    })
+    .catch((err) => {
+        console.log(err)
+    })
+    .finally(() => {
 
-  })
+    })
