@@ -1,8 +1,8 @@
 import './index.css';
-import NewsApi      from './scripts/modules/NewsApi';
+import NewsApi from './scripts/modules/NewsApi';
 import NewsCardList from './scripts/components/NewsCardList';
-import NewsCard     from './scripts/components/NewsCard';
-import DataStorage  from './scripts/modules/DataStorage';
+import NewsCard from './scripts/components/NewsCard';
+import DataStorage from './scripts/modules/DataStorage';
 
 import { createTimeFormat } from './scripts/utils/helpers';
 
@@ -65,13 +65,13 @@ function searchNews(event) {
             const cards = data.articles;
 
             // Проверка на отсутствие карточек
-            if (cards.length === 0) {
+            if (!cards.length) {
                 renderState('nothing found');
+                return;
             }
-            else {
-                newsCardList.renderCards(cards);
-                renderState('card ready');
-            }
+
+            newsCardList.renderCards(cards);
+            renderState('card ready');
         })
         .catch((err) => {
             renderState('error');
