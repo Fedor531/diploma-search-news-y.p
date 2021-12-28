@@ -12,8 +12,8 @@ const newsCardsContainer = document.querySelector('.cards');
 const nothingFoundContainer = document.querySelector('.nothing-found');
 const nothingFoundServerContainer = document.querySelector('.nothing-found-server');
 
-const searchForm   = document.querySelector('.search-news__form');
-const searchInput  = document.querySelector('.search-news__input');
+const searchForm = document.querySelector('.search-news__form');
+const searchInput = document.querySelector('.search-news__input');
 const searchButton = document.querySelector('.search-news__button');
 const showMoreCardsButton = document.querySelector('.search-results__show-more-button');
 
@@ -28,7 +28,7 @@ const dataStorage = new DataStorage();
 const buildCardItem = (cardData) => new NewsCard(cardData, createTimeFormat);
 const newsCardList = new NewsCardList(newsCardsContainer, buildCardItem, showMoreCardsButton);
 
-// Функция похоже на reducer в redux
+// Функция управления состоянем отрисовки при поиске
 function renderState(state) {
     switch (state) {
         case 'loading':
@@ -37,11 +37,12 @@ function renderState(state) {
             searchResultsContainer.setAttribute('style', 'display:none');
             nothingFoundServerContainer.setAttribute('style', 'display:none');
             searchButton.setAttribute('disabled', 'disabled');
+            searchInput.setAttribute('disabled', 'disabled');
             break;
-        case 'nothing found':
+        case 'nothing':
             nothingFoundContainer.setAttribute('style', 'display:block');
             break;
-        case 'card ready':
+        case 'ready':
             searchResultsContainer.setAttribute('style', 'display:block');
             break;
         case 'error':
@@ -50,6 +51,7 @@ function renderState(state) {
         case 'end':
             preloader.setAttribute('style', 'display:none');
             searchButton.removeAttribute('disabled');
+            searchInput.removeAttribute('disabled');
             break;
     }
 }
@@ -65,14 +67,14 @@ function searchNews(event) {
             dataStorage.setData({ searchValue: searchTextValue, data });
             const cards = data.articles;
 
-            // Проверка на отсутствие карточек
+            // Новостей нет
             if (!cards.length) {
-                renderState('nothing found');
+                renderState('nothing');
                 return;
             }
 
             newsCardList.renderCards(cards);
-            renderState('card ready');
+            renderState('ready');
         })
         .catch((err) => {
             renderState('error');

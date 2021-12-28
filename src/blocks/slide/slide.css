@@ -11,6 +11,6 @@
     cursor: pointer;
     background: #FFFFFF;
     border-radius: 16px;
-    height: 242px;
+    height: 200px !important;
     list-style-type: none;
 }

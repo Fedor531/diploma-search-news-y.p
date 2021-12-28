@@ -13,8 +13,8 @@ const githubApi = new GithubApi();
 
 githubApi.getCommits()
     .then((res) => {
-        // Берем последние 10 коммитов
-        const cards = res.slice(0, 10);
+        // Берем последние 6 коммитов
+        const cards = res.slice(0, 6);
         commitCardList.renderCards(cards);
 
         setTimeout(() => {

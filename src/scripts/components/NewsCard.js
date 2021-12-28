@@ -5,7 +5,7 @@ export default class NewsCard {
     }
 
     createCardHtml() {
-        this._cardImage = this._cardData.urlToImage ? this._cardData.urlToImage : 'https://i.ytimg.com/vi/3e0FsU1N6OQ/hqdefault_live.jpg';
+        this._cardImage = this._cardData.urlToImage ? this._cardData.urlToImage : 'https://st3.depositphotos.com/23594922/31822/v/600/depositphotos_318221368-stock-illustration-missing-picture-page-for-website.jpg';
 
         const markUp = `
         <a class="card" href="${ this._cardData.url }" target="_blank">
