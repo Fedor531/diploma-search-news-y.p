@@ -24,6 +24,11 @@
   background: #2A65CC;
 }
 
+.search-news__button:disabled {
+    background: #c3c3c3;
+    cursor: default;
+}
+
 @media all and (min-width: 768px) {
   .search-news__button {
     z-index: 5;

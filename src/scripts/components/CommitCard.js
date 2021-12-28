@@ -6,23 +6,23 @@ export default class CommitCard {
 
     createCardHtml() {
         const markUp = `
-        <li class="slide glide__slide" style="height: 220px">
-        <div class="slide__container">
-          <p class="slide__date">${ this.createTimeFormat(this._cardData.commit.committer.date) }</p>
-          <div class="slide__author-container">
-            <img class="slide__author-avatar" src="${ this._cardData.author.avatar_url }" alt="GitHub avatar"/>
-            <div class="slide__author-info">
-              <p class="slide__author-name">${ this._cardData.commit.committer.name }</p>
-              <p class="slide__author-email">${ this._cardData.commit.committer.email }</p>
+        <li class="swiper-slide">
+            <div class="swiper-slide__container">
+              <p class="swiper-slide__date">${ this.createTimeFormat(this._cardData.commit.committer.date) }</p>
+              <div class="swiper-slide__author-container">
+                <div class="swiper-slide__author-info">
+                  <p class="swiper-slide__author-name">${ this._cardData.commit.committer.name }</p>
+                  <p class="swiper-slide__author-email">${ this._cardData.commit.committer.email }</p>
+                </div>
+              </div>
+              <p class="swiper-slide__commit-text">${ this._cardData.commit.message }</p>
             </div>
-          </div>
-          <p class="slide__commit-text">${ this._cardData.commit.message }</p>
-        </div>
-      </li>`
+        </li>`
 
         const element = document.createElement('div');
         element.insertAdjacentHTML('afterbegin', markUp.trim());
         return element.firstElementChild;
     }
-
 }
+
+// <img class="swiper-slide__author-avatar" src="${ this._cardData.author.avatar_url }" alt="GitHub avatar"/>

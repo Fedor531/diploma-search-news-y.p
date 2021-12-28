@@ -1,26 +1,47 @@
 import './about.css';
-import './glide.core.min.css';
-import CommitCardList from '../scripts/components/CommitCardList'
-import CommitCard from '../scripts/components/CommitCard'
-import GithubApi from '../scripts/modules/GithubApi'
-import { createTimeFormat } from '../scripts/utils/helpers'
-import Glide from '@glidejs/glide'
+import CommitCardList from '../scripts/components/CommitCardList';
+import CommitCard from '../scripts/components/CommitCard';
+import GithubApi from '../scripts/modules/GithubApi';
 
-const $commitCardsContainer = document.querySelector('.glide__slides')
+import { createTimeFormat } from '../scripts/utils/helpers';
 
-const buildCardItem = (cardData) => new CommitCard(cardData, createTimeFormat)
+const commitCardsContainer = document.querySelector('.swiper-wrapper');
+const buildCardItem = (cardData) => new CommitCard(cardData, createTimeFormat);
 
-const commitCardList = new CommitCardList($commitCardsContainer, buildCardItem)
-const githubApi = new GithubApi()
+const commitCardList = new CommitCardList(commitCardsContainer, buildCardItem);
+const githubApi = new GithubApi();
 
 githubApi.getCommits()
     .then((res) => {
-        commitCardList.renderCards(res)
-        new Glide('.glide').mount()
+        // Берем последние 10 коммитов
+        const cards = res.slice(0, 10);
+        commitCardList.renderCards(cards);
+
+        setTimeout(() => {
+            const swiper = new Swiper('.swiper', {
+                direction: 'horizontal',
+                loop: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true
+                },
+                slidesPerView: 3,
+                spaceBetween: 20,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                breakpoints: {
+                    0: {
+                        slidesPerView: 1,
+                    },
+                    768: {
+                        slidesPerView: 3,
+                    }
+                }
+            });
+        }, 0)
     })
     .catch((err) => {
-        console.log(err)
-    })
-    .finally(() => {
-
+        console.log(err);
     })

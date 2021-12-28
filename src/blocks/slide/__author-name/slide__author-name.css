@@ -1,4 +1,4 @@
-.slide__author-name {
+.swiper-slide__author-name {
   font-family: 'Roboto Slab';
   font-style: normal;
   font-weight: normal;
@@ -9,7 +9,7 @@
 }
 
 @media all and (min-width: 1440px) {
-  .slide__author-name {
+  .swiper-slide__author-name {
     font-size: 26px;
   }
 }

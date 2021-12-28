@@ -1,11 +1,11 @@
-import './analytics.css'
-import Statistics from '../scripts/components/Statistics'
-import DataStorage from '../scripts/modules/DataStorage'
+import './analytics.css';
+import Statistics from '../scripts/components/Statistics';
+import DataStorage from '../scripts/modules/DataStorage';
 
-const dataStorage = new DataStorage()
+const dataStorage = new DataStorage();
 
-const data = dataStorage.getData('data')
+const data = dataStorage.getData('data');
 
-const statistics = new Statistics(data)
+const statistics = new Statistics(data);
 
-statistics.init()
+statistics.init();
