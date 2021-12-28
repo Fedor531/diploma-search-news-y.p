@@ -22,5 +22,4 @@ export default class NewsCard {
         element.insertAdjacentHTML('afterbegin', markUp.trim());
         return element.firstElementChild;
     }
-
 }

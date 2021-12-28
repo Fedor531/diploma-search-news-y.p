@@ -1,5 +1,4 @@
 export default class DataStorage {
-
     setData(data) {
         localStorage.setItem('data', JSON.stringify(data))
     }

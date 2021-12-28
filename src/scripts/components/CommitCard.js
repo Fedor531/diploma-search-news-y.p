@@ -24,5 +24,4 @@ export default class CommitCard {
         element.insertAdjacentHTML('afterbegin', markUp.trim());
         return element.firstElementChild;
     }
-
 }

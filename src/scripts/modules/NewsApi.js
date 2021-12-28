@@ -15,8 +15,7 @@ export default class NewsApi {
 
     _setDateInfo() {
         const nowDate = new Date()
-        const todayDate = `${ nowDate.getFullYear() }-${ nowDate.getMonth() + 1 }-${ nowDate.getDate() }`
-        this._todayDate = todayDate
+        this._todayDate = `${ nowDate.getFullYear() }-${ nowDate.getMonth() + 1 }-${ nowDate.getDate() }`
 
         const pastDate = new Date()
         pastDate.setDate(pastDate.getDate() - 7);
