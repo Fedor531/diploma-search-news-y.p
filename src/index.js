@@ -12,8 +12,8 @@ const newsCardsContainer = document.querySelector('.cards');
 const nothingFoundContainer = document.querySelector('.nothing-found');
 const nothingFoundServerContainer = document.querySelector('.nothing-found-server');
 
-const searchForm = document.querySelector('.search-news__form');
-const searchInput = document.querySelector('.search-news__input');
+const searchForm   = document.querySelector('.search-news__form');
+const searchInput  = document.querySelector('.search-news__input');
 const searchButton = document.querySelector('.search-news__button');
 const showMoreCardsButton = document.querySelector('.search-results__show-more-button');
 
@@ -24,6 +24,7 @@ const newsApiConfig = {
 
 const api = new NewsApi(newsApiConfig);
 const dataStorage = new DataStorage();
+
 const buildCardItem = (cardData) => new NewsCard(cardData, createTimeFormat);
 const newsCardList = new NewsCardList(newsCardsContainer, buildCardItem, showMoreCardsButton);
 
@@ -82,11 +83,6 @@ function searchNews(event) {
         })
 }
 
-// Функция вывода дополнительных карточек с новостями
-function showMoreCards() {
-    newsCardList.renderCards();
-}
-
 // Слушатели
-showMoreCardsButton.addEventListener('click', showMoreCards);
+showMoreCardsButton.addEventListener('click', () => newsCardList.renderCards());
 searchForm.addEventListener('submit', searchNews);
