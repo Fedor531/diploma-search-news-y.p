@@ -1,5 +1,4 @@
 import './about.css';
-import './glide.core.min.css';
 import CommitCardList from '../scripts/components/CommitCardList'
 import CommitCard from '../scripts/components/CommitCard'
 import GithubApi from '../scripts/modules/GithubApi'
@@ -16,7 +15,6 @@ const githubApi = new GithubApi()
 githubApi.getCommits()
     .then((res) => {
         commitCardList.renderCards(res)
-        new Glide('.glide').mount()
     })
     .catch((err) => {
         console.log(err)
