@@ -6,35 +6,42 @@
 @import url(./__content/card__content.css);
 
 .card {
-  max-width: 288px;
-  height: 446px;
-  background: #FFFFFF;
-  border-radius: 8px;
-  margin-bottom: 8px;
+    max-width: 288px;
+    height: 446px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    transition: transform .3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
 }
 
 .card:last-child {
-  margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 @media all and (min-width: 768px) {
-  .card {
-    max-width: 224px;
-    height: 420px;
-    margin: 0 4px 8px 4px;
-  }
-  .card:last-child {
-    margin: 0 4px 8px 4px;
-  }
+    .card {
+        max-width: 224px;
+        height: 420px;
+        margin: 0 4px 8px 4px;
+    }
+
+    .card:last-child {
+        margin: 0 4px 8px 4px;
+    }
 }
 
 @media all and (min-width: 1440px) {
-  .card {
-    max-width: 400px;
-    height: 576px;
-    margin: 0 8px 16px 8px;
-  }
-  .card:last-child {
-    margin: 0 8px 16px 8px;
-  }
+    .card {
+        max-width: 400px;
+        height: 576px;
+        margin: 0 8px 16px 8px;
+    }
+
+    .card:last-child {
+        margin: 0 8px 16px 8px;
+    }
 }
