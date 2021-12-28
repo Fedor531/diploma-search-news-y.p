@@ -41,7 +41,7 @@ export default class Statistics {
         ]
     }
 
-    // Функция подсчета количества упоминаний в загаловках
+    // Функция подсчета количества упоминаний в заголовках
     _totalMentions() {
         const keyWord = this._data.searchValue
         const arrayCard = this._data.data.articles
@@ -80,10 +80,10 @@ export default class Statistics {
         this._days.forEach(function (item) {
             if (item.date) {
                 const diagramDayHtml = `
-       <div class="diagram__analytics-day-container">
-         <p class="diagram__analytics-day">${ item.date }, ${ item.day }</p>
-         <div class="diagram__analytics-result" style="width:${ item.countNews }%"><p class="diagram__analytics-result-number">${ item.countNews }</p></div>
-       </div>`
+                   <div class="diagram__analytics-day-container">
+                     <p class="diagram__analytics-day">${ item.date }, ${ item.day }</p>
+                     <div class="diagram__analytics-result" style="width:${ item.countNews }%"><p class="diagram__analytics-result-number">${ item.countNews }</p></div>
+                   </div>`
 
                 const element = document.createElement('div');
                 element.insertAdjacentHTML('afterbegin', diagramDayHtml.trim());

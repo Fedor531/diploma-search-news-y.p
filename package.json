@@ -9,7 +9,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/Fedor531/Yandex-diploma-front.git"
+        "url": "git+https://github.com/Fedor531/search-news-y.p.git"
     },
     "keywords": [
         "html",
@@ -20,9 +20,9 @@
     "author": "Fedor <fedor531@yandex.ru>",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/Fedor531/Yandex-diploma-front/issues"
+        "url": "https://github.com/Fedor531/search-news-y.p/issues"
     },
-    "homepage": "https://github.com/Fedor531/Yandex-diploma-front#readme",
+    "homepage": "https://github.com/Fedor531/search-news-y.p#readme",
     "devDependencies": {
         "babel-loader": "^8.1.0",
         "@babel/cli": "^7.12.1",
