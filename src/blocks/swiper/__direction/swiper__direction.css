@@ -1,4 +1,4 @@
-.slider__direction_type_prev {
+.swiper__direction_type_prev {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -6,7 +6,7 @@
   left: 0;
 }
 
-.slider__direction_type_next {
+.swiper__direction_type_next {
   cursor: pointer;
   position: absolute;
   top: 50%;

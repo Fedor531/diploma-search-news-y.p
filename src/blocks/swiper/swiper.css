@@ -1,0 +1,25 @@
+@import url(./__points/swiper__points.css);
+@import url(./__point/swiper__point.css);
+@import url(./__point/swiper__point_type_isActive.css);
+@import url(./__direction/swiper__direction.css);
+
+.swiper {
+    position: relative;
+    max-width: 288px;
+    margin: 16px auto;
+}
+
+@media all and (min-width: 768px) {
+    .swiper {
+        max-width: 688px;
+        margin: 32px auto 0 auto;
+    }
+}
+
+@media all and (min-width: 1440px) {
+    .swiper {
+        max-width: 1120px;
+        margin: 64px auto 0 auto;
+    }
+}
+

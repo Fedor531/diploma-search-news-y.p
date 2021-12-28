@@ -1,4 +1,4 @@
-.slide__author-avatar {
+.swiper-slide__author-avatar {
   width: 48px;
   height: 48px;
   border-radius: 50%;
@@ -7,7 +7,7 @@
 
 
 @media all and (min-width: 1440px) {
-  .slide__author-avatar {
+  .swiper-slide__author-avatar {
     width: 64px;
     height: 64px;
     margin: 0 16px 0 0;

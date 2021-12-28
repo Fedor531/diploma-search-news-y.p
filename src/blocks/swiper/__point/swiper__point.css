@@ -1,4 +1,4 @@
-.slider__point {
+.swiper__point {
   display: block;
   width: 8px;
   height: 12px;
@@ -8,6 +8,6 @@
   cursor: pointer;
   border: none;
 }
-.slider__point:focus {
+.swiper__point:focus {
   border: none;
 }

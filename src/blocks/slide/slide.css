@@ -7,25 +7,26 @@
 @import url(./__commit-text/slide__commit-text.css);
 @import url(./__container/slide__container.css);
 
-.slide {
-  cursor: pointer;
-  background: #FFFFFF;
-  border-radius: 16px;
-  max-width: 288px;
-  height: 264px;
+.swiper-slide {
+    cursor: pointer;
+    background: #FFFFFF;
+    border-radius: 16px;
+    min-height: 200px;
+    list-style-type: none;
 }
 
 @media all and (min-width: 768px) {
-  .slide {
-    max-width: 336px;
-    height: 242px;
-  }
+    .swiper-slide {
+        max-width: 336px;
+        height: 242px;
+    }
 }
 
 @media all and (min-width: 1440px) {
-  .slide {
-    height: 288px;
-    max-width: 400px;
-  }
+    .swiper-slide {
+        height: 288px;
+        max-width: 288px;
+        width: 288px;
+    }
 }
 

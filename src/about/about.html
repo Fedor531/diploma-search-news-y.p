@@ -7,6 +7,7 @@
     <link rel="icon" href="<%=require('../images/favicon.png').default%>"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
     <meta name="description" content="Страница с описанием проекта">
     <meta name="author" content="Fedor Pereverzev"/>
     <title>NewsAnalyzer | О проекте</title>
@@ -137,30 +138,15 @@
         </div>
 
 
-        <div class="swiper slider">
-          <!-- Additional required wrapper -->
-          <div class="swiper-wrapper">
+        <div class="swiper">
+          <ul class="swiper-wrapper">
             <!-- Slides -->
-            <div class="swiper-slide">Slide 1</div>
-            <div class="swiper-slide">Slide 2</div>
-            <div class="swiper-slide">Slide 3</div>
-            ...
-          </div>
-          <!-- If we need pagination -->
+          </ul>
+
           <div class="swiper-pagination"></div>
 
-          <!-- If we need navigation buttons -->
-          <div class="swiper-button-prev">
-          <img class="slider__direction_type_prev" data-glide-dir="<"
-                               src="<%=require('../images/prev.png').default%>" alt="<" />
-                               </div>
-          <div class="swiper-button-next">
-          <img class="slider__direction_type_next" data-glide-dir=">"
-                               src="<%=require('../images/next.png').default%>" alt=">" />
-          </div>
-
-          <!-- If we need scrollbar -->
-          <div class="swiper-scrollbar"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
         </div>
     </section>
 
@@ -203,6 +189,7 @@
     </div>
 </footer>
 
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 <script src="<%= htmlWebpackPlugin.files.js %>"></script>
 </body>
 </html>
