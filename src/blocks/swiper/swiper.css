@@ -3,21 +3,39 @@
 @import url(./__point/swiper__point_type_isActive.css);
 @import url(./__direction/swiper__direction.css);
 
-.swiper {
+.swiper-container {
     position: relative;
     max-width: 288px;
     margin: 16px auto;
 }
 
+.swiper-button-prev, .swiper-button-next {
+    display: none !important;
+}
+
 @media all and (min-width: 768px) {
-    .swiper {
+    .swiper-container {
         max-width: 688px;
         margin: 32px auto 0 auto;
+    }
+
+    .swiper-button-prev, .swiper-button-next {
+        display: block !important;
+    }
+
+    .swiper-button-prev {
+        position: absolute !important;
+        left: -50px !important;
+    }
+
+    .swiper-button-next {
+        position: absolute !important;
+        right: -50px !important;
     }
 }
 
 @media all and (min-width: 1440px) {
-    .swiper {
+    .swiper-container {
         max-width: 1120px;
         margin: 64px auto 0 auto;
     }

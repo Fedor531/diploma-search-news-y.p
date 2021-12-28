@@ -11,22 +11,6 @@
     cursor: pointer;
     background: #FFFFFF;
     border-radius: 16px;
-    min-height: 200px;
+    height: 242px;
     list-style-type: none;
 }
-
-@media all and (min-width: 768px) {
-    .swiper-slide {
-        max-width: 336px;
-        height: 242px;
-    }
-}
-
-@media all and (min-width: 1440px) {
-    .swiper-slide {
-        height: 288px;
-        max-width: 288px;
-        width: 288px;
-    }
-}
-
